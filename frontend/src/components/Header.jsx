@@ -5,19 +5,15 @@ const Header = () => {
     <header>
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <a className="navbar-brand">Z</a>
+                <a className="navbar-brand" href="#">Z</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbar">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page">Home</a>
-                        </li>
-                        <li className="nav-item"><Link to="order">Click me!</Link></li>
-                        <li className="nav-item"><a className="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Pricing</a></li>
-                        <li className="nav-item"><a className="nav-link disabled" aria-disabled="true">Disabled</a></li>
-                    </ul>
+                <div className="navbar-nav">
+                    <Link to="/" className="btn nav-link active" aria-current="page">Main Page</Link>
+                    <Link to="order" className="btn">Checkout</Link>
+                </div>
                 </div>
             </div>
         </nav>
