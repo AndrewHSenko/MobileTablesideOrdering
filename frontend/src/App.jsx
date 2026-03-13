@@ -1,17 +1,17 @@
 import { Route, Routes } from 'react-router'
-import toast from 'react-hot-toast'
 
-// Import pages go here
+import MainLayout from './layouts/MainLayout'
+import MainMenu from './pages/MainMenu'
+import Order from './pages/Order'
 
 const App = () => {
   return (
-    <div>
-      <button onClick={() => toast.success("Success!")} className="card bg-amber-300!">Press here!</button>
-      <button onClick={() => toast.error("Uh-oh!")} />
-      <Routes>
-        <Route path="/" />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path = "/" element={<MainLayout />}>
+        <Route index element={<MainMenu />}/>
+        <Route path="order" element={<Order />}/>
+      </Route>
+    </Routes>
   )
 }
 
