@@ -4,7 +4,7 @@ import Footer from '../components/Footer.jsx'
 
 const MainLayout = () => {
   return (
-    <div class="container-fluid bg-gray-200!">
+    <div className="container-fluid">
       <Header />
       <main>
         <Outlet />
