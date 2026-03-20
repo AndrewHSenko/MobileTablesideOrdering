@@ -4,9 +4,9 @@ import Footer from '../components/Footer.jsx'
 
 const MainLayout = () => {
   return (
-    <div className="container-fluid p-0">
+    <div className="container-fluid d-flex flex-column p-0 min-vh-100 bg-info-subtle">
       <Header />
-      <main>
+      <main className="flex-grow-1">
         <Outlet />
       </main>
       <Footer />

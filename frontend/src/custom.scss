@@ -36,5 +36,15 @@ $altblue-color: #dff6fe;
 // For the record, this is dumb. Bootstrap does not allow for @use which Sass now prefers, so this is the workaround. I prefer @import where you don't have to define all the theme colors explicitly. Alas.
 
 .navbar {
-    background-color: $info-color;
-}
+  background-color: $info-color;
+};
+
+.logo-img {
+  height: 20px;
+  width: auto;
+};
+
+.svg-icon {
+  width: var(--icon-size, 32px);
+  height: var(--icon-size, 32px);
+};
