@@ -7,11 +7,11 @@ const MainMenu = () => {
     <Container className="container-fluid my-2">
       <Row>
         <Col xs={6} md={4}>
-          <CatCard dest="popular" image={Reuben} title="Popular"/>
-          <CatCard dest="salads" image={Reuben} title="Salads" />
+          <CatCard image={Reuben} title="Popular"/>
+          <CatCard image={Reuben} title="Salads" />
         </Col>
         <Col xs={6} md={4}>
-          <CatCard dest="sandwiches" image={Reuben} title="Sandwiches" />
+          <CatCard image={Reuben} title="Sandwiches" />
         </Col>
       </Row>
       
