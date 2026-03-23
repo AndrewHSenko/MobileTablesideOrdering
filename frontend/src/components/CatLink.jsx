@@ -1,8 +1,10 @@
-import { Link } from 'react-router'
+import { useState } from 'react'
 
 const CatLink = ({dest, text}) => {
+  const [currentCat, setCurrentCat] = useState()
+
   return (
-    <Link to={dest} className={`nav-link text-nowrap ${location.pathname === dest ? "active fw-bold" : ""}`}>{text}</Link>
+    <button className={`nav-link text-nowrap ${location.pathname === dest ? "active fw-bold" : ""}`}>{text}</button>
   )
 }
 
