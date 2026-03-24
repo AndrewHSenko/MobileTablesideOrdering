@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router'
+import { Nav } from 'react-bootstrap'
 
-const CatLink = ({ dest, text }) => {
-
+const CatLink = ({ eventKey, text }) => {
   return (
-    <NavLink to={dest} className={({ isActive }) =>`nav-link text-nowrap ${isActive ? 'text-secondary fw-bold' : ''}`}>{text}</NavLink>
+    <Nav.Link eventKey={eventKey} className="nav-link text-nowrap">{text}</Nav.Link>
   )
 }
 

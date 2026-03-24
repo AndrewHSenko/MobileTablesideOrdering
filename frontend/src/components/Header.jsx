@@ -5,7 +5,7 @@ import logo from '../assets/logo.png'
 const Header = () => {
     const { headerRef } = useHeaderHeight()
     return (
-        <header ref={headerRef} className="sticky-top z-1">
+        <header ref={headerRef} className="sticky-top z-2">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <div className="d-flex align-items-center flex-nowrap gap-2">

@@ -39,6 +39,11 @@ $altblue-color: #dff6fe;
   background-color: $info-color;
 };
 
+.nav-link.active {
+  color: $secondary;
+  font-weight: bold;
+}
+
 .scroll::-webkit-scrollbar {
   display: none; /* optional: hide scrollbar */
 }

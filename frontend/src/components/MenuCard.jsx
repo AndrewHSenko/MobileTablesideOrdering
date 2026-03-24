@@ -9,9 +9,9 @@ const MenuCard = ({title, image, regPrice, largePrice, desc}) => {
         {/* Base Card */}
         <div className="card text-center text-decoration-none rounded-3" onClick={() => setSelected(true)}>
             <img src={image} alt={`${title} picture`} className="card-img-top"/>
-            <div className="d-flex justify-content-center gap-4 card-title px-3 my-2 mt-3">
+            <div className="d-flex justify-content-center gap-3 card-title px-3 my-2 mt-3">
                 <h5 className="lead fs-6 align-content-center">{title}</h5>
-                <h5 className="lead fs-6 align-content-center px-1">
+                <h5 className="lead fs-6 align-content-center">
                     {largePrice ? `${regPrice} / ${largePrice}` : regPrice}
                 </h5>
             </div>

@@ -1,8 +1,8 @@
 import Reuben from '../assets/Reuben.png'
 import PestoTomato from '../assets/PestoTomato.png'
-import CaesarSalad from '../assets/CaesarSalad.png'
+import BLT from '../assets/BLT.png'
 
-export const popularOptions = {
+export const sandwichOptions = {
     "Our Classic Reuben" : {
         title: "Our Classic Reuben",
         image: Reuben,
@@ -10,12 +10,12 @@ export const popularOptions = {
         largePrice: "$20.50",
         desc: "Huey’s homestyle corned beef, Swiss Emmental cheese, The Brinery sauerkraut & our own Russian dressing on hand-sliced, grilled Jewish Rye bread from Huey's Bakehouse."
     },
-    "Caesar Salad" : {
-        title: "Caesar Salad",
-        image: CaesarSalad,
+    "The Humble BLT" : {
+        title: "The Humble BLT",
+        image: BLT,
         regPrice: "$14.99",
         largePrice: "$16.99",
-        desc: "Fresh romaine lettuce, Parmigiano-Reggiano cheese actually from the Reggiano region of Italy, housemade croutons & freshly ground Telicherry black pepper. Tossed in Huey's mother's Caesar dressing."
+        desc: "What's more to say? Nueske’s applewood-smoked bacon, baby gem leaf lettuce, local tomatoes & mayo on Jewish Rye bread from Huey's Bakehouse."
     },
     "The Godfather's Mistress" : {
         title: "The Godfather's Mistress",
