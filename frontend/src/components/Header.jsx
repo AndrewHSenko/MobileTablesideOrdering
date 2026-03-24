@@ -8,9 +8,9 @@ const Header = () => {
         <header ref={headerRef} className="sticky-top z-2">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <div className="d-flex align-items-center flex-nowrap gap-2">
-                        <Link to="/" className="navbar-brand ms-2" aria-current="page">
-                            <img src={logo} alt="sandwich icon" className="w-100"/>
+                    <div className="d-flex align-items-center ms-4 flex-nowrap gap-2">
+                        <Link to="/" className="navbar-brand" aria-current="page">
+                            <img src={logo} alt="Eatery logo" className="w-100"/>
                         </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
