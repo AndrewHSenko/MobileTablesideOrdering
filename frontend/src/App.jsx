@@ -1,20 +1,35 @@
 import { Route, Routes } from 'react-router'
-
+import routes from './routes.jsx'
 import MainLayout from './layouts/MainLayout'
 import MainMenu from './pages/MainMenu'
-import Order from './pages/Order'
-import Food from './pages/Food'
 
 const App = () => {
   return (
     <Routes>
       <Route path = "/" element={<MainLayout />}>
         <Route index element={<MainMenu />}/>
-        <Route path="order" element={<Order />}/>
-        <Route path="food" element={<Food />}/>
+        {routes.map((route, index) => (
+          <Route 
+            key={index}
+            path={route.path}
+            element={route.element}
+            index={route.index}
+          />
+          ))}
       </Route>
     </Routes>
   )
 }
 
 export default App 
+
+/**
+ * {routes.map((route, index) => (
+          <Route 
+            key={index}
+            path={route.path}
+            element={route.element}
+            exact={route.exact}
+          />
+        ))}
+ */

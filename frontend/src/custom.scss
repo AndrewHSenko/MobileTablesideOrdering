@@ -39,6 +39,14 @@ $altblue-color: #dff6fe;
   background-color: $info-color;
 };
 
+.sec-sticky {
+  position: sticky;
+  top: 60px;
+}
+.sec-sticky::-webkit-scrollbar {
+  display: none; /* optional: hide scrollbar */
+}
+
 .logo-img {
   height: 20px;
   width: auto;

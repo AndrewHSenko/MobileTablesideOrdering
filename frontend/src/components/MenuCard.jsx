@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const MenuCard = ({title, image, regPrice, largePrice, desc}) => {
   const [selected, setSelected] = useState(false)
+  const [size, setSize] = useState("nosher")
 
   return (
     <div className="mb-3 mx-3">
@@ -30,7 +31,7 @@ const MenuCard = ({title, image, regPrice, largePrice, desc}) => {
                     <div className="d-flex flex-column gap-2 mt-2 mb-3">
                         <div className="d-flex justify-content-between form-check fs-6 mb-2 mx-2">
                             <div>
-                                <input className="form-check-input" type="radio" name="nosher" id="nosher" />
+                                <input className="form-check-input" type="radio" id="nosher" name="nosher" value="nosher" checked={size === "nosher"} onChange={(e) => setSize(e.target.value)}/>
                                 <label className="form-check-label" htmlFor="nosher">
                                     Nosher (Regular)
                                 </label>
@@ -40,7 +41,7 @@ const MenuCard = ({title, image, regPrice, largePrice, desc}) => {
                         {largePrice &&
                             <div className="d-flex justify-content-between form-check fs-6 mb-2 mx-2">
                                 <div>
-                                    <input className="form-check-input" type="radio" name="fresser" id="fresser" checked /> {/* Add onChange handler to decide what to Add to checkout list */}
+                                    <input className="form-check-input" type="radio" id="fresser" name="fresser" checked={size === "fresser"} onChange={(e) => setSize(e.target.value)}/> {/* Add onChange handler to decide what to Add to checkout list */}
                                     <label className="form-check-label" htmlFor="fresser">
                                         Fresser (Large)
                                     </label>

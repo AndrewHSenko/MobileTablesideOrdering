@@ -1,9 +1,10 @@
+import { forwardRef } from 'react'
 import { Link } from 'react-router'
 import logo from '../assets/logo.png'
 
-const Header = () => {
+const Header = forwardRef((props, ref) => {
   return (
-    <header>
+    <header ref={ref} className="sticky-top">
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <div className="d-flex align-items-center flex-nowrap gap-2">
@@ -24,5 +25,6 @@ const Header = () => {
         </nav>
     </header>
   )
-}
+})
+
 export default Header

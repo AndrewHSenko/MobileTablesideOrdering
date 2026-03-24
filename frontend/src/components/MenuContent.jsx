@@ -2,10 +2,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { popularOptions } from '../options/popularOptions.js'
 import MenuCard from './MenuCard'
 
-import Reuben from '../assets/Reuben.png'
-import PestoTomato from '../assets/PestoTomato.png'
-import BLT from '../assets/BLT.png'
-
 const MenuContent = () => {
   const menuItems = popularOptions;
 
