@@ -18,10 +18,10 @@ const MenuCard = ({title, image, regPrice, largePrice, desc}) => {
         </div>
         {/* Overlay Detail Card */}
         {selected && (
-            <div className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center rounded-3 bg-dark bg-opacity-50 z-3"
+            <div className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 z-3"
                 onClick={() => setSelected(false)}>
                 <div
-                    className="card p-3 mx-0"
+                    className="card rounded-4 p-3 mx-0 overflow-y-auto" style={{ maxHeight : "85vh", maxWidth : "98vw"}}
                     onClick={(e) => e.stopPropagation()}> {/* Prevents accidental closing from touching */}
                     <h2 className="card-title text-center bg-primary bg-opacity-25 p-3 rounded-3 fst-italic">{title}</h2>
                     <img src={image} alt={`${title} picture`} className="card-img-top"/>

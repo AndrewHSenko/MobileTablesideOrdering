@@ -1,16 +1,19 @@
 import { Outlet } from 'react-router'
+import { HeaderHeightProvider } from './HeaderHeightContext.jsx'
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 
-const MainLayout = () => {
+const MainLayout = ({ children }) => {
   return (
-    <div className="container-fluid d-flex flex-column p-0 min-vh-100 bg-info-subtle">
-      <Header />
-      <main className="flex-grow-1">
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
+    <HeaderHeightProvider>
+      <div className="container-fluid d-flex flex-column p-0 min-vh-100 bg-info-subtle">
+        <Header />
+        <main className="flex-grow-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </HeaderHeightProvider>
   )
 }
 
