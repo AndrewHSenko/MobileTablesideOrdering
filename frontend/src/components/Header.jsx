@@ -8,7 +8,7 @@ const Header = () => {
         <header ref={headerRef} className="sticky-top z-2">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <div className="d-flex align-items-center ms-4 flex-nowrap gap-2">
+                    <div className="d-flex align-items-center ms-1 flex-nowrap gap-2">
                         <Link to="/" className="navbar-brand" aria-current="page">
                             <img src={logo} alt="Eatery logo" className="w-100"/>
                         </Link>
@@ -19,7 +19,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse w-100 pt-1" id="navbar">
                         <div className="navbar-nav gap-2">
                             <Link to="/" className="btn border-1 border-dark mx-auto" aria-current="page">Main Menu</Link>
-                            <Link to="order" className="btn border-1 border-dark mx-auto">Checkout</Link>
+                            <Link to="checkout" className="btn border-1 border-dark mx-auto">Checkout</Link>
                         </div>
                     </div>
                 </div>

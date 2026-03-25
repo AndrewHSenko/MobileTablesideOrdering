@@ -1,15 +1,17 @@
-import Order from './pages/Order'
+import Checkout from './pages/Checkout'
+import MainMenu from './pages/MainMenu'
 import Menu from './pages/Menu'
 import NotFound from './pages/NotFound'
 
 const routes = [
     {
+        path: '/',
         index: true,
-        element: <Menu />
+        element: <MainMenu />
     },
     {
-        path: 'order',
-        element: <Order />
+        path: 'checkout',
+        element: <Checkout />
     },
     {
         path: 'menu',

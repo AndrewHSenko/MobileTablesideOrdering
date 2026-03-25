@@ -4,7 +4,6 @@ import MenuContent from "../components/MenuContent"
 
 const Menu = () => {
   const [activeMenu, setActiveMenu] = useState("popular");
-
   return (
     <div className="container-fluid mx-0 px-0">
       <CatScroll activeMenu={activeMenu} setActiveMenu={setActiveMenu}/>

@@ -4,7 +4,7 @@ const CatCard = ({image, title}) => {
   return (
     <Link to="/menu" className="card text-center text-decoration-none rounded-3 my-2">
         <img src={image} alt={`${title} picture`} className="card-img-top"/>
-        <h5 className="card-title my-1">{title}</h5>
+        <h4 className="card-title lead my-1">{title}</h4>
     </Link>
   )
 }

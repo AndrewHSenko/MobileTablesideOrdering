@@ -30,8 +30,8 @@ const categories = {
 const CatScroll = ({ activeMenu, setActiveMenu }) => {
   const { headerHeight } = useHeaderHeight()
   return (
-    <div className="scroll sticky-top overflow-auto px-5 mb-3 py-1 z-1 border-bottom border-1 border-black bg-primary-subtle bg-opacity-25" style={{ top : headerHeight }}>
-        <Nav className="d-flex flex-nowrap gap-5 fs-6 text-primary" activeKey={activeMenu} onSelect={(key) => setActiveMenu(key)}>
+    <div className="scroll sticky-top overflow-auto px-3 mb-3 py-1 z-1 border-bottom border-1 border-black bg-primary-subtle bg-opacity-25" style={{ top : headerHeight }}>
+        <Nav className="d-flex flex-nowrap gap-4 fs-6 text-primary" activeKey={activeMenu} onSelect={(key) => setActiveMenu(key)}>
             {
               Object.values(categories).map((category) => (
                 <CatLink key={category.id} eventKey={category.id} text={category.title} />
