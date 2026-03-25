@@ -5,7 +5,7 @@ import MenuContent from "../components/MenuContent"
 
 const Menu = () => {
   const location = useLocation()
-  const { active } = location.active || {"popular"}
+  const { active } = location.active || {active : "popular"}
   const [activeMenu, setActiveMenu] = useState(active);
   return (
     <div className="container-fluid mx-0 px-0">
