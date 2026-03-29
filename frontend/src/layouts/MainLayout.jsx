@@ -6,7 +6,7 @@ import Footer from '../components/Footer.jsx'
 const MainLayout = ({ children }) => {
   return (
     <HeaderHeightProvider>
-      <div className="container-fluid d-flex flex-column p-0 min-vh-100 bg-info-subtle">
+      <div className="container-fluid d-flex flex-column p-0 min-vh-100 bg-lightbg">
         <Header />
         <main className="flex-grow-1">
           <Outlet />

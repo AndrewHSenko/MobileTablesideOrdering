@@ -3,8 +3,13 @@ import { useCart } from '../layouts/CartContext.jsx'
 
 const MenuCard = ({ item }) => {
   const [selected, setSelected] = useState(false)
-  const [size, setSize] = useState("nosher")
+  const [size, setSize] = useState("Nosher")
   const { addToCart } = useCart()
+
+  const changeSize = (new_size) => {
+    setSize(new_size)
+    item.options.size = new_size
+  }
 
   return (
     <div className="mb-3 mx-3">
@@ -33,8 +38,8 @@ const MenuCard = ({ item }) => {
                     <div className="d-flex flex-column gap-2 mt-2 mb-3">
                         <div className="d-flex justify-content-between form-check fs-6 mb-2 mx-2">
                             <div>
-                                <input className="form-check-input" type="radio" id="nosher" name="nosher" value="nosher" checked={size === "nosher"} onChange={(e) => setSize(e.target.value)}/>
-                                <label className="form-check-label" htmlFor="nosher">
+                                <input className="form-check-input" type="radio" id="Nosher" name="Nosher" value="Nosher" checked={size === "Nosher"} onChange={(e) => changeSize(e.target.value)}/>
+                                <label className="form-check-label" htmlFor="Nosher">
                                     Nosher (Regular)
                                 </label>
                             </div>
@@ -43,8 +48,8 @@ const MenuCard = ({ item }) => {
                         {item.largePrice &&
                             <div className="d-flex justify-content-between form-check fs-6 mb-2 mx-2">
                                 <div>
-                                    <input className="form-check-input" type="radio" id="fresser" name="fresser" value="fresser" checked={size === "fresser"} onChange={(e) => setSize(e.target.value)}/> {/* Add onChange handler to decide what to Add to checkout list */}
-                                    <label className="form-check-label" htmlFor="fresser">
+                                    <input className="form-check-input" type="radio" id="Fresser" name="Fresser" value="Fresser" checked={size === "Fresser"} onChange={(e) => changeSize(e.target.value)}/> {/* Add onChange handler to decide what to Add to checkout list */}
+                                    <label className="form-check-label" htmlFor="Fresser">
                                         Fresser (Large)
                                     </label>
                                 </div>
@@ -54,7 +59,7 @@ const MenuCard = ({ item }) => {
                     </div>
                     <div className="d-flex justify-content-around">
                         <button className="btn btn-sm btn-primary" onClick={() => setSelected(false)}>Close</button>
-                        <button className="btn btn-sm btn-success" onClick={() => addToCart(item)}>Add</button>
+                        <button className="btn btn-sm btn-success" onClick={() => {addToCart(item); setSelected(false)}}>Add</button>
                     </div>
                 </div>
             </div>

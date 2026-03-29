@@ -8,7 +8,11 @@ export const popularOptions = {
         image: Reuben,
         regPrice: "17.99",
         largePrice: "20.50",
-        desc: "Huey’s homestyle corned beef, Swiss Emmental cheese, The Brinery sauerkraut & our own Russian dressing on hand-sliced, grilled Jewish Rye bread from Huey's Bakehouse."
+        desc: "Huey’s homestyle corned beef, Swiss Emmental cheese, The Brinery sauerkraut & our own Russian dressing on hand-sliced, grilled Jewish Rye bread from Huey's Bakehouse.",
+        options: {
+            size: "Nosher",
+            pickle: null
+        }
     },
     "Caesar Salad" : {
         title: "Caesar Salad",
@@ -21,6 +25,10 @@ export const popularOptions = {
         image: PestoTomato,
         regPrice: "17.99",
         largePrice: null,
-        desc: "Fresh handmade mozzarella, tomatoes & basil pesto on grilled sourdough bread from Huey's Bakehouse."
+        desc: "Fresh handmade mozzarella, tomatoes & basil pesto on grilled sourdough bread from Huey's Bakehouse.",
+        options: {
+            size: "Nosher",
+            pickle: null
+        }
     }
 };

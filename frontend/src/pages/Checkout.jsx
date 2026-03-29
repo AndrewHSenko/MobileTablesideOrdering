@@ -13,21 +13,21 @@ const Checkout = () => {
           <h1 className="display-4 fw-bold text-secondary my-0 border-bottom border-primary">Your Order</h1>
           <Link to="/" className="lead fs-6 text-decoration-none text-info">Add items</Link>
         </div>
-        <table className="table table-info table-borderless rounded-3 mx-1">
+        <table className="table table-borderless rounded-3 mx-1">
           <tbody className="lead">
             {cart.length > 0 ? cart.map((item) => (
               <Fragment key={item.id}>
-                <tr>
-                  <CheckoutItem name={item.title} />
+                <tr className="bg-lightbg">
+                  <CheckoutItem item={item} />
                   <CheckoutQty item={item}/>
                 </tr>
-                <tr>
-                  <td className="py-0 fs-6">{`$${(item.regPrice * item.quantity).toFixed(2)}`}</td>
+                <tr >
+                  <td className="py-0 fs-6 bg-lightbg">{`$${(item.regPrice * item.quantity).toFixed(2)}`}</td>
                 </tr>
               </Fragment>
               )) :
               <tr>
-                <td className="display-5 text-center">No items added</td>
+                <td className="display-5 text-center bg-lightbg">No items added</td>
               </tr>
             }
           </tbody>

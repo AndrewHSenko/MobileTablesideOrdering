@@ -19,34 +19,40 @@ export function CartProvider({ children }) {
 
     // Adds item to cart
     const addToCart = (item) => {
-        setCart((prev) => {
-            const exists = prev.find((i) => i.id === item.id) // i represents previously-added items
+        setCart((cart) => {
+            const exists = cart.find((i) => i.id === item.id) // i represents cartiously-added items
             if (exists) {
-                return prev.map((i) => i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i)
+                return cart.map((i) => i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i)
             }
-            return [...prev, { ...item, quantity: 1 }]
+            return [...cart, { ...item, quantity: 1 }]
         })
         setToastMessage(`${item.title} added to cart!`);
         setShowToast(true);
     }
 
     const increaseQty = (id) => {
-        setCart((prev) =>
-            prev.map((i) => i.id === id ? { ...i, quantity: i.quantity + 1 } : i)
+        setCart((cart) =>
+            cart.map((i) => i.id === id ? { ...i, quantity: i.quantity + 1 } : i)
         );
     }
 
     const decreaseQty = (id) => {
-        setCart((prev) => {
-            const existing = prev.find((i) => i.id === id);
+        setCart((cart) => {
+            const existing = cart.find((i) => i.id === id);
             if (existing.quantity === 1) {
             // Remove item from cart entirely
-            return prev.filter((i) => i.id !== id);
+            return cart.filter((i) => i.id !== id);
             }
             // Otherwise decrement quantity
-            return prev.map((i) => i.id === id ? { ...i, quantity: i.quantity - 1 } : i);
+            return cart.map((i) => i.id === id ? { ...i, quantity: i.quantity - 1 } : i);
         });
     };
+
+    const deleteItem = (id) => {
+        setCart((cart) => {
+            return cart.filter((item) => item.id !== id)
+        })
+    }
 
     const cartTotal = cart.reduce((sum, item) => {
         return sum + (item.regPrice * item.quantity);
@@ -59,9 +65,9 @@ export function CartProvider({ children }) {
     }
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, increaseQty, decreaseQty, cartTotal, clearCart }}>
+        <CartContext.Provider value={{ cart, addToCart, increaseQty, decreaseQty, deleteItem, cartTotal, clearCart }}>
             {children}
-            <ToastContainer position="bottom-end" className="p-3" style={{ zIndex: 9999 }}>
+            <ToastContainer position="top-center" className="p-3" style={{ zIndex: 9999, position: "fixed"}}>
                 <Toast
                     show={showToast}
                     onClose={() => setShowToast(false)}

@@ -7,7 +7,7 @@ const Icon = ({dest, image, text}) => {
 
   return (
     <>
-      <Link to={dest} onClick={() => {text === "Language" ? setShowToast(true) : null}} className="d-flex flex-column align-items-center text-center link-underline-altblue text-black">
+      <Link to={dest} onClick={() => {text === "Language" ? setShowToast(true) : null}} className="d-flex flex-column align-items-center text-center text-decoration-none text-black">
         <img src={image} alt={`${text} icon`} className="svg-icon" style={{"--icon-size" : "36px"}}/>
         <p className="fs-6">{text}</p>
       </Link>
